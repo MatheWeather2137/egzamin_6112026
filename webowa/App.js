@@ -90,7 +90,7 @@ function App() {
             checked={showCategory1}
             onChange={(e) => setShowCategory1(e.target.checked)}
           />
-          <label className="form-check-label" htmlForm="switchKwiaty">
+          <label className="form-check-label" htmlFor="switchKwiaty">
             Kwiaty
           </label>
         </div>
@@ -103,7 +103,7 @@ function App() {
             checked={showCategory2}
             onChange={(e) => setShowCategory2(e.target.checked)}
           />
-          <label className="form-check-label" htmlForm="switchZwierzeta">
+          <label className="form-check-label" htmlFor="switchZwierzeta">
             Zwierzęta
           </label>
         </div>
@@ -116,7 +116,7 @@ function App() {
             checked={showCategory3}
             onChange={(e) => setShowCategory3(e.target.checked)}
           />
-          <label className="form-check-label" htmlForm="switchSamochody">
+          <label className="form-check-label" htmlFor="switchSamochody">
             Samochody
           </label>
         </div>
@@ -124,11 +124,12 @@ function App() {
       <div className="row g-4">
         {filteredImages.map((img) => (
           <div key={img.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div className="card h-100 shadow-sm" style={{ margin: "5px" }}>
+            <div className="card h-100 shadow-sm">
               <img
                 src={`/assets/${img.filename}`}
                 alt={img.alt}
-                className="card-img-top"
+                className="card-img rounded"
+                style={{ margin: "5px" }}
               />
               <div className="card-body">
                 <h4 className="card-title fs-6">Pobrań: {img.downloads}</h4>

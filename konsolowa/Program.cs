@@ -77,7 +77,7 @@ namespace konsolowka6112026
 
             int searchValue = 500;
             int foundIndex = customArray.FindFirst(searchValue);
-            if (foundIndex == -1)
+            if (foundIndex != -1)
             {
                 Console.WriteLine($"Wartość {searchValue} znaleziona na indekse: {foundIndex}");
             }
